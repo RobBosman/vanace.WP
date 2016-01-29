@@ -1,0 +1,103 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Ace Course v0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2015-05-05 23:26:45+0000\n"
+"Last-Translator: admin <vanace@bosmanpfauth.nl>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: Dutch\n"
+"X-Poedit-Country: NETHERLANDS\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: widgets/ace-course-progress.widget.php:28
+#@ ace-course
+msgid "Ace Course Progress"
+msgstr "Ace Cursusvoortgang"
+
+#: includes/ace-course-plugin.class.php:1
+#@ ace-course
+msgid "Only show the user's own comments on this page"
+msgstr "Toon op deze pagina uitsluitend reacties die de gebruiker zelf heeft geschreven"
+
+#: widgets/ace-course-progress.widget.php:29
+#@ ace-course
+msgid "Displays the user's progress on Ace Course exercises"
+msgstr "Geeft weer hoever de gebruiker is gevorderd met zijn/haar Ace Cursusopgaven"
+
+#. translators: plugin header field 'Author'
+#: ace-course.php:0
+#@ ace-course
+msgid "Rob BosmanAuthor URI: http://www.google.comText Domain: ace-courseDomain Path: /languages"
+msgstr ""
+
+#. translators: plugin header field 'AuthorURI'
+#: ace-course.php:0
+#@ ace-course
+msgid "http://www.google.comText Domain: ace-courseDomain Path: /languages"
+msgstr ""
+
+#: includes/ace-course-plugin.class.php:1
+#@ ace-course
+msgid "Treat comments as answers to an <strong>Ace Course exercise</strong>; only show the user's own comments"
+msgstr "Toon uitsluitend reacties die de gebruiker zelf heeft geschreven"
+
+#: includes/ace-course-plugin.class.php:1
+#@ ace-course
+msgid "Ace Course"
+msgstr "Ace Cursus"
+
+#: widgets/ace-course-progress.widget.php:92
+#@ ace-course
+msgid "Title:"
+msgstr "Titel:"
+
+#: widgets/ace-course-progress.widget.php:134
+#@ ace-course
+msgid "TODO visual URL:"
+msgstr "URL van afbeelding voor 'TODO':"
+
+#: widgets/ace-course-progress.widget.php:139
+#@ ace-course
+msgid "DONE visual URL:"
+msgstr "URL van afbeelding voor 'DONE':"
+
+#. translators: plugin header field 'Name'
+#: ace-course.php:0
+#@ ace-course
+msgid "Ace CoursePlugin URI: http://www.google.com/Description: <strong>Ace Course</strong> plugin featuring 'exercise posts'. Comments to such posts (the 'answers') are visible only for the user who wrote them. A Course Progress widget displays the user's progress.Version: 0.1.0Author: Rob BosmanAuthor URI: http://www.google.comText Domain: ace-courseDomain Path: /languages"
+msgstr ""
+
+#. translators: plugin header field 'PluginURI'
+#: ace-course.php:0
+#@ ace-course
+msgid "http://www.google.com/Description: <strong>Ace Course</strong> plugin featuring 'exercise posts'. Comments to such posts (the 'answers') are visible only for the user who wrote them. A Course Progress widget displays the user's progress.Version: 0.1.0Author: Rob BosmanAuthor URI: http://www.google.comText Domain: ace-courseDomain Path: /languages"
+msgstr ""
+
+#. translators: plugin header field 'Description'
+#: ace-course.php:0
+#@ ace-course
+msgid "<strong>Ace Course</strong> plugin featuring 'exercise posts'. Comments to such posts (the 'answers') are visible only for the user who wrote them. A Course Progress widget displays the user's progress.Version: 0.1.0Author: Rob BosmanAuthor URI: http://www.google.comText Domain: ace-courseDomain Path: /languages"
+msgstr ""
+
+#. translators: plugin header field 'Version'
+#: ace-course.php:0
+#@ ace-course
+msgid "0.1.0Author: Rob BosmanAuthor URI: http://www.google.comText Domain: ace-courseDomain Path: /languages"
+msgstr ""
+
+#: widgets/ace-course-progress.widget.php:106
+#@ ace-course
+msgid "Categories:"
+msgstr "Categorieën:"
+

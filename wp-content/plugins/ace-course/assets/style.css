@@ -1,0 +1,52 @@
+/*
+ * Customize the login button.
+*/
+#ace-login-button ~ .submit #wp-submit {
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+#ace-login-button::before {
+  content: url("login-button.png");
+}
+#ace-login-button {
+  cursor: pointer;
+  float: right;
+}
+
+/*
+ * Position AceCourse TODO/DONE images over each Post on the overview page.
+ */
+article.ace-exercise-todo > div > a::after {
+  content: url("TODO.png");
+}
+article.ace-exercise-done > div > a::after {
+  content: url("DONE.png");
+}
+article.ace-exercise > div > a::after {
+  position: relative;
+  left: 50%;
+  top: 130px;
+}
+.column article.ace-exercise {
+  padding-bottom: 30%;
+}
+
+/*
+ * Layout the AceCourse progress widget.
+ */
+.widget_ace-course-progres-widget .ace-exercise {
+  color: #fff;
+  padding-left: 5px;
+  margin: 0 0 2px 0;
+  line-height: 20px;
+  overflow: hidden;
+}
+.widget_ace-course-progres-widget .ace-exercise-todo {
+  background: #033F71;
+}
+.widget_ace-course-progres-widget .ace-exercise-done {
+  background: #DF7534;
+}
