@@ -9,12 +9,13 @@ namespace nl\bransom\wordpress;
 
 class AceCourseUser {
   
-  const CORE_TEACHER = 0;
-  const TEACHER = 1;
-  const TRAINEE = 2;
+  const ADMIN = 0;
+  const CORE_TEACHER = 1;
+  const TEACHER = 2;
+  const TRAINEE = 3;
   
   private static $ROLE_MAPPING = array(
-      "administrator" => self::CORE_TEACHER,
+      "administrator" => self::ADMIN,
       "sub-admin"     => self::CORE_TEACHER,
       "docent"        => self::TEACHER,
       NULL            => self::TRAINEE
@@ -46,12 +47,8 @@ class AceCourseUser {
     }
   }
   
-  public function is_teacher() {
-    return $this->ace_role == self::CORE_TEACHER || $this->ace_role == self::TEACHER;
-  }
-  
   public function is_comment_visible($comment) {
-    if ($this->ace_role == self::CORE_TEACHER) {
+    if ($this->ace_role == self::ADMIN) {
       return TRUE;
     }
     
@@ -60,7 +57,7 @@ class AceCourseUser {
       return TRUE; // own comment
     }
     
-    if ($this->is_teacher()) {
+    if ($this->ace_role == self::CORE_TEACHER || $this->ace_role == self::TEACHER) {
       if (function_exists ("groups_get_groups")) {
         // Check if teacher shares one or more groups with comment owner.
         $common_bp_groups = groups_get_groups(array(
@@ -80,7 +77,7 @@ class AceCourseUser {
   }
 
   public function add_css_classes(array &$classes) {
-    if ($this->ace_role == self::CORE_TEACHER) {
+    if ($this->ace_role == self::ADMIN || $this->ace_role == self::CORE_TEACHER) {
       $classes[] = 'ace-core-teacher';
       $classes[] = 'ace-teacher';
     } else if ($this->ace_role == self::TEACHER) {
