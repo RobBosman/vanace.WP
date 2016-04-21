@@ -26,8 +26,8 @@ class AceCourseUser {
   private $bp_group_ids; // BuddyPress group ID's; lazy fetch
 
   public function __construct($user = NULL) {
-	  $this->user = $user;
-	  if ($this->user != NULL || function_exists("wp_get_current_user")) {
+    $this->user = $user;
+    if ($this->user != NULL || function_exists("wp_get_current_user")) {
       $this->init();
     } else {
       add_action('plugins_loaded', array(&$this, 'init'));
@@ -35,7 +35,7 @@ class AceCourseUser {
   }
 
   public function init() {
-	  if ($this->user == NULL) {
+    if ($this->user == NULL) {
       $this->user = wp_get_current_user();
     }
     
@@ -90,7 +90,7 @@ class AceCourseUser {
   public function get_css_classes() {
     $classes = array();
     $this->add_css_classes($classes);
-	  return implode(' ', $classes);
+    return implode(' ', $classes);
   }
 
   private function get_bp_group_ids() {
@@ -101,6 +101,6 @@ class AceCourseUser {
         $this->bp_group_ids = array(); // BuddyPress not installed
       }
     }
-	  return $this->bp_group_ids;
+    return $this->bp_group_ids;
   }
 }
