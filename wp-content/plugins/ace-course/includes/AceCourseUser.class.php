@@ -26,8 +26,19 @@ class AceCourseUser {
   private $bp_group_ids; // BuddyPress group ID's; lazy fetch
 
   public function __construct($user = NULL) {
-    $this->user = $user != NULL ? $user : wp_get_current_user();
-    
+    $this->user = $user;
+    if ($this->user != NULL) {
+      $this->init();
+    } else {
+      add_action('plugins_loaded', array(&$this, 'init'));
+    }
+  }
+
+  public function init() {
+    if ($this->user == NULL) {
+      $this->user = \wp_get_current_user();
+    }
+
     $wp_role = isset($this->user->roles[0]) ? $this->user->roles[0] : NULL;
     if (isset(self::$ROLE_MAPPING[$wp_role])) {
       $this->ace_role = self::$ROLE_MAPPING[$wp_role];

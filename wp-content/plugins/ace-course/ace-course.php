@@ -4,7 +4,7 @@
   Plugin Name: Ace Course
   Plugin URI: http://www.google.com/
   Description: <strong>Ace Course</strong> plugin featuring 'exercise posts'. Comments to such posts (the 'answers') are visible only for the user who wrote them. A Course Progress widget displays the user's progress.
-  Version: 3.1
+  Version: 3.1.1
   Author: Rob Bosman
   Author URI: http://www.google.com
   Text Domain: ace-course
