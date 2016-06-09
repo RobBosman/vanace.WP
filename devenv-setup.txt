@@ -1,0 +1,49 @@
+1. install nginx in C:\Progs\Wnmp\
+2. edit C:\Progs\Wnmp\conf\nginx.config:
+    ## @@@
+	client_max_body_size 20M;
+    listen 9080; # IPv4
+
+        ## Static files
+#        location ~* \.(?:css|gif|htc|ico|js|jpe?g|png|swf)$ {
+        location ~* \.(?:css|gif|htc|ico|js|jpe?g|png|woff|ttf)$ {
+            expires max;
+            log_not_found off;
+            ## No need to bleed constant updates. Send the all shebang in one
+            ## fell swoop.
+            tcp_nodelay off;
+            ## Set the OS file cache.
+            open_file_cache max=1000 inactive=120s;
+            open_file_cache_valid 45s;
+            open_file_cache_min_uses 2;
+            open_file_cache_errors off;
+        }
+
+#        ## @@@ cerios.cvtool
+#        location ~/bransom {
+#            index bransom.php;
+#            location ~/REST {
+#                rewrite ^(.*)$ /bransom/REST/rest.php;
+#                ## index rest.php;
+#            }
+#        }
+#        location ~/cvtool {
+#            index CVtool.html;
+#        }
+#	
+#        ## @@@ vanace.WP
+#        location ~/WP {
+#            index index.html;
+#            location ~* \.(?:ttf|woff)$ {}
+#            location ~/wp-admin/* {
+#                rewrite ^(.*)$ /WP/wp-admin/index.php;
+#            }
+#            location ~/* {
+#                rewrite ^(.*)$ /WP/index.php;
+#            }
+#        }
+
+3. start nginx
+4. login to MariaDB (root/password) and create a new database
+5. copy installer.php and ...archipe.zip to directory C:\Progs\Wnmp\html\WP
+6. open http://localhost:9080/WP/installer.php

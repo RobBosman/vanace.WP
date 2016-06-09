@@ -19,10 +19,10 @@ class AceCourseCore {
   const TAG_NONCE = 'ace_nonce';
   
   private $ace_user;
-
+  
   public function __construct() {
     $this->ace_user = new AceCourseUser();
-    
+
     add_action('save_post', array(&$this, 'update_post'));
     add_action('edit_post', array(&$this, 'update_post'));
     add_action('publish_post', array(&$this, 'update_post'));

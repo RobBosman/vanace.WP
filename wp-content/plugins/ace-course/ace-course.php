@@ -21,7 +21,7 @@ if (!defined('ACE_COURSE')) {
   define('ACE_COURSE', plugin_basename(__FILE__));
   define('ACE_COURSE_TEXT_DOMAIN', 'ace-course');
   define('ACE_COURSE_PLUGIN_URL', plugin_dir_url(__FILE__));
-  define('ACE_COURSE_PLUGIN_DIR', dirname(ACE_COURSE));
+  define('ACE_COURSE_PLUGIN_DIR', dirname(constant('ACE_COURSE')));
 }
 
 require_once plugin_dir_path(__FILE__) . 'includes' . DIRECTORY_SEPARATOR . 'AceCourseUser.class.php';

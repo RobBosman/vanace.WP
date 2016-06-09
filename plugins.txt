@@ -1,0 +1,18 @@
+Adminimize - filter admin dashboard
+BuddyPress - community stuff
+BuddyPressDocs - uploads
+ChildTheme - edit page layout
+CommentGuestbook - Mijn logboek
+CustomizeLogin - weg!
+DiviPageBuilder - kan weg?
+MassMessaging - email berichten naar group
+PostTypeOrder - volgorde van posts
+SimpleComment - nabewerken
+UserRoleEditor - config user roles
+WP-UserAvatar - avatar
+WP-Member - dripfeeds user/groups
+
+category niet meer nodig
+reacties per group/cursist
+docent koppelen aan groep/cursus/dagdeel
+docent: zoekscherm in Mijn logboek
